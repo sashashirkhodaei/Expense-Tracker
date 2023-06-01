@@ -6,8 +6,8 @@ import streamlit as st # conda install streamlit
 
 # -------------- SETTINGS --------------
 incomes = ["Salary", "Investments", "Other Income"]
-expenses = ["Rent", "Utilities", "Food", "Transportation", "Miscellaneous",
-            "Phone", "Savings", "Insurance", "Subscriptions"]
+expenses = ["Rent", "Utilities", "Food", "Transportation", "Insurance",
+            "Phone", "Subscriptions", "Savings", "Miscellaneous"]
 currency = "USD"
 page_title = "Income and Expense Tracker"
 page_icon = ":money_with_wings:"
@@ -32,3 +32,6 @@ with st.form("entry_form", clear_on_submit=True):
     with st.expander("Income"):
         for income in incomes:
             st.number_input(f"{income}:", min_value=0, format="%i", step=10, key=income)
+    with st.expander("Expenses"):
+        for expense in expenses: 
+            st.number_input(f"{expense}:", min_value=0, format="%i", step=10, key=expense)
