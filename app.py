@@ -39,3 +39,11 @@ with st.form("entry_form", clear_on_submit=True):
         comment = st.text_area("", placeholder="Enter a comment here ...")
     
     "---"
+    submitted = st.form_submit_button("Save Data")
+    if submitted:
+        period = str(st.session_state["year"]) + "_" + str(st.session_state["month"])
+        incomes = {income: st.session_state[income] for income in incomes}
+        expenses = {expense: st.session_state[expense] for expense in expenses}
+        st.write(f"incomes: {incomes}")
+        st.write(f"expenses: {expenses}")
+        st.success("Data Saved!")
