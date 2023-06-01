@@ -35,3 +35,7 @@ with st.form("entry_form", clear_on_submit=True):
     with st.expander("Expenses"):
         for expense in expenses: 
             st.number_input(f"{expense}:", min_value=0, format="%i", step=10, key=expense)
+    with st.expander("Comment"):
+        comment = st.text_area("", placeholder="Enter a comment here ...")
+    
+    "---"
