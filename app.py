@@ -1,3 +1,6 @@
+import calendar # core python module 
+from datetime import datetime # core python module
+
 import plotly.graph_objects as go # conda install plotly
 import streamlit as st # conda install streamlit
 
@@ -13,3 +16,7 @@ layout = "centered"
 
 st.set_page_config(page_title=page_title, page_icon=page_icon, layout=layout)
 st.title(page_title + " " + page_icon)
+
+# --- DROP DOWN VALUES FOR SELECTING THE PERIOD ---
+years = [datetime.today().year, datetime.today().year + 1]
+months = list(calendar.month_name[1:])
