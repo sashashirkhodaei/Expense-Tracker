@@ -1,4 +1,4 @@
-import ploty.graph_objects as go # conda install plotly
+import plotly.graph_objects as go # conda install plotly
 import streamlit as st # conda install streamlit
 
 # -------------- SETTINGS --------------
@@ -10,3 +10,6 @@ page_title = "Income and Expense Tracker"
 page_icon = ":money_with_wings:"
 layout = "centered"
 # --------------------------------------
+
+st.set_page_config(page_title=page_title, page_icon=page_icon, layout=layout)
+st.title(page_title + " " + page_icon)
