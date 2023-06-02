@@ -74,3 +74,8 @@ with st.form("saved_periods"):
         source = list(range(len(incomes))) + [len(incomes)] * len(expenses)
         target = [len(incomes)] * len(incomes) + [label.index(expense) for expense in expenses.keys()]
         value = list(incomes.values()) + list(expenses.values())
+
+        # Data to dict, dict to sankey
+        link = dict(source=source, target=target, value=value)
+        node = dict(label=label, pad=20, thickness=30, color="#E694FF")
+        data = go.Sankey(link=link, node=node)
