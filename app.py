@@ -5,6 +5,7 @@ import plotly.graph_objects as go # conda install plotly
 import streamlit as st # conda install streamlit
 from streamlit_option_menu import option_menu  # conda install streamlit-option-menu
 
+import database as db # local import
 
 # -------------- SETTINGS --------------
 incomes = ["Salary", "Investments", "Other Income"]
@@ -22,6 +23,13 @@ st.title(page_title + " " + page_icon)
 # --- DROP DOWN VALUES FOR SELECTING THE PERIOD ---
 years = [datetime.today().year, datetime.today().year + 1]
 months = list(calendar.month_name[1:])
+
+# --- DATABASE INTERFACE ---
+def get_all_periods():
+    items = db.fetch_all_periods()
+    periods = [item["key"] for item in items]
+    return periods
+
 
 # --- HIDE STREAMLIT STYLE ---
 hide_st_style = """
@@ -65,8 +73,7 @@ if selected == "Data Entry":
             period = str(st.session_state["year"]) + "_" + str(st.session_state["month"])
             incomes = {income: st.session_state[income] for income in incomes}
             expenses = {expense: st.session_state[expense] for expense in expenses}
-            st.write(f"incomes: {incomes}")
-            st.write(f"expenses: {expenses}")
+            db.insert_period(period, incomes, expenses, comment)
             st.success("Data Saved!")
 
 # --- PLOT PERIODS ---
