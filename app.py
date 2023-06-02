@@ -68,3 +68,9 @@ with st.form("saved_periods"):
         col2.metric("Total Expense", f"{total_expense}{currency}")
         col3.metric("Remaining Budget", f"{remaining_budget}{currency}")
         st.text(f"Comment: {comment}")
+
+        # Create sankey chart
+        label = list(incomes.keys()) + ["Total Income"] + list(expenses.keys())
+        source = list(range(len(incomes))) + [len(incomes)] * len(expenses)
+        target = [len(incomes)] * len(incomes) + [label.index(expense) for expense in expenses.keys()]
+        value = list(incomes.values()) + list(expenses.values())
