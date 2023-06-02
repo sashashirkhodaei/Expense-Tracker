@@ -60,3 +60,11 @@ with st.form("saved_periods"):
                     'Phone': 25, 'Subscriptions': 125, 'Savings': 1000, 'Miscellaneous': 750}
 
         # Create metrics
+        total_income = sum(incomes.values())
+        total_expense = sum(expenses.values())
+        remaining_budget = total_income - total_expense
+        col1, col2, col3 = st.columns(3)
+        col1.metric("Total Income", f"{total_income}{currency}")
+        col2.metric("Total Expense", f"{total_expense}{currency}")
+        col3.metric("Remaining Budget", f"{remaining_budget}{currency}")
+        st.text(f"Comment: {comment}")
