@@ -47,3 +47,16 @@ with st.form("entry_form", clear_on_submit=True):
         st.write(f"incomes: {incomes}")
         st.write(f"expenses: {expenses}")
         st.success("Data Saved!")
+
+# --- PLOT PERIODS ---
+st.header("Data Visualization")
+with st.form("saved_periods"):
+    period = st.selectbox("Select Period:", ["June_2023"])
+    submitted = st.form_submit_button("Plot Period")
+    if submitted:
+        comment = "Comment"
+        incomes = {'Salary': 3000, 'Investments': 400, 'Other Income': 600}
+        expenses = {'Rent': 1500, 'Utilities': 40, 'Food': 200, 'Transportation': 60, 'Insurance': 300,
+                    'Phone': 25, 'Subscriptions': 125, 'Savings': 1000, 'Miscellaneous': 750}
+
+        # Create metrics
