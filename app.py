@@ -3,6 +3,8 @@ from datetime import datetime # core python module
 
 import plotly.graph_objects as go # conda install plotly
 import streamlit as st # conda install streamlit
+from streamlit_option_menu import option_menu  # conda install streamlit-option-menu
+
 
 # -------------- SETTINGS --------------
 incomes = ["Salary", "Investments", "Other Income"]
@@ -20,6 +22,14 @@ st.title(page_title + " " + page_icon)
 # --- DROP DOWN VALUES FOR SELECTING THE PERIOD ---
 years = [datetime.today().year, datetime.today().year + 1]
 months = list(calendar.month_name[1:])
+
+# --- NAVIGATION MENU ---
+selected = option_menu(
+    menu_title=None,
+    options=["Data Entry", "Data Visualization"],
+    icons=["pencil-fill", "bar-chart-fill"], 
+    orientation="horizontal",
+)
 
 # --- INPUT & SAVE PERIODS ---
 st.header(f"Data Entry in {currency}")
