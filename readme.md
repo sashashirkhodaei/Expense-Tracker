@@ -1,33 +1,39 @@
-![banner](assets/banner.png)
 
 
-## Authors
+<p align="center">
+  <a href="https://github.com/sashashirkhodaei">Sasha Shirkhodaei</a>
+</p>
 
-- [@sashashirkhodaei](https://www.github.com/sashashirkhodaei)
+<p align="center">
+  <a href="#-about"><strong>About</strong></a> ·
+  <a href="#technologies"><strong>Technologies</strong></a> ·
+  <a href="#live-demo-of-detabase"><strong>Live Demo of Detabase</strong></a> ·
+  <a href="#repository-structure"><strong>Repository Structure</strong></a> ·
+  <a href="#-license"><strong>License</strong></a>
+</p>
+<br/>
 
+https://github.com/sashashirkhodaei/Expense-Tracker/assets/123327900/1b760f6e-8418-4867-8e32-26998004c252
 
-## Table of Contents
+<br/>
 
-  - [Tech Stack](#tech-stack)
-  - [Quick glance at the results](#quick-glance-at-the-results)
-  - [Lessons learned and recommendation](#lessons-learned-and-recommendation)
-  - [Repository structure](#repository-structure)
-  - [License](#license)
+## 🎯 About
 
-## Tech Stack
+A simple expense tracker to help with budgeting and staying on top of your finances. 
+This application utlizes the Python framework Streamlit which allowed me to make a web app without the need for HTML and CSS, keeping this project 100% Python. 
+
+Note, this application is hosted via the Streamlit community cloud, so if the app doesnt get frequent traffic it "falls alseep". if the streamlit app says that it has "fallen alseep" simply awaken the app when prompted.
+
+## Technologies
 
 - Python (refer to requirement.txt for the packages used in this project)
 - Streamlit (interface for the model)
 
+## Live Demo of Detabase
 
-## Quick glance at the results
+https://github.com/sashashirkhodaei/Expense-Tracker/assets/123327900/9bde291e-bc4e-4725-8bbf-042ca46e4388
 
-
-
- **Lessons learned and recommendation**
-
-
-
+<br/>
 
 ## Repository structure
 ```
