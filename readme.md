@@ -1,8 +1,4 @@
-
-
-<p align="center">
-  <a href="https://github.com/sashashirkhodaei">Sasha Shirkhodaei</a>
-</p>
+<h1 align="center">Expense Tracker</h1>
 
 <p align="center">
   <a href="#-about"><strong>About</strong></a> ·
